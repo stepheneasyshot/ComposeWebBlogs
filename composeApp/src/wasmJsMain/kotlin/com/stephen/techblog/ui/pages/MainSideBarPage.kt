@@ -15,24 +15,27 @@ import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
-import com.stephen.techblog.data.ThemeState
+import com.stephen.techblog.data.*
 import com.stephen.techblog.ui.component.CenterText
 import com.stephen.techblog.ui.component.LinkText
 import com.stephen.techblog.ui.component.SimpleDivider
-import com.stephen.techblog.ui.component.rememberToastState
 import com.stephen.techblog.ui.theme.csdnColorFilter
 import com.stephen.techblog.ui.theme.juejinColorFilter
 import com.stephen.techblog.ui.theme.webTitleText
+import kotlinx.browser.window
 import org.jetbrains.compose.resources.painterResource
 import techblog.composeapp.generated.resources.*
 
 @Composable
-fun FirstWebPage(currentTheme: ThemeState, onThemeWitch: (ThemeState) -> Unit) {
-
-    val toastState = rememberToastState()
+fun FirstWebPage(
+    modifier: Modifier,
+    currentTheme: ThemeState,
+    onThemeWitch: (ThemeState) -> Unit,
+    onClickCatlogItem: (CatalogItem) -> Unit,
+) {
 
     Box(
-        modifier = Modifier.fillMaxSize(1f),
+        modifier = modifier,
         contentAlignment = Alignment.Center
     ) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
@@ -43,18 +46,23 @@ fun FirstWebPage(currentTheme: ThemeState, onThemeWitch: (ThemeState) -> Unit) {
                 contentDescription = "avatar"
             )
 
-            CenterText(text = "Stephen's Blogs", fontFamily = FontFamily.Monospace, style = webTitleText, modifier = Modifier.padding(bottom = 20.dp))
+            CenterText(
+                text = "Stephen's Blogs",
+                fontFamily = FontFamily.Monospace,
+                style = webTitleText,
+                modifier = Modifier.padding(bottom = 20.dp)
+            )
 
             SimpleDivider(modifier = Modifier.padding(bottom = 20.dp).height(2.dp).width(120.dp))
 
             CenterText(text = "在知中行，在行中知", modifier = Modifier.padding(bottom = 20.dp))
 
             LinkText(text = "博客目录", modifier = Modifier.padding(bottom = 20.dp)) {
-                toastState.show("博客目录")
+                onClickCatlogItem(CatalogItem.CATEGORIES)
             }
 
             LinkText(text = "关于", modifier = Modifier.padding(bottom = 20.dp)) {
-                toastState.show("关于")
+                onClickCatlogItem(CatalogItem.ABOUT_ME)
             }
         }
 
@@ -70,7 +78,7 @@ fun FirstWebPage(currentTheme: ThemeState, onThemeWitch: (ThemeState) -> Unit) {
                     interactionSource = remember { MutableInteractionSource() },
                     indication = null,
                 ) {
-                    toastState.show("juejin")
+                    window.open(juejinPage)
                 }
             )
             Image(
@@ -81,7 +89,7 @@ fun FirstWebPage(currentTheme: ThemeState, onThemeWitch: (ThemeState) -> Unit) {
                     interactionSource = remember { MutableInteractionSource() },
                     indication = null,
                 ) {
-                    toastState.show("csdn")
+                    window.open(csdnPage)
                 }
             )
             Image(
@@ -92,7 +100,7 @@ fun FirstWebPage(currentTheme: ThemeState, onThemeWitch: (ThemeState) -> Unit) {
                     interactionSource = remember { MutableInteractionSource() },
                     indication = null,
                 ) {
-                    toastState.show("github")
+                    window.open(githubPage)
                 }
             )
         }

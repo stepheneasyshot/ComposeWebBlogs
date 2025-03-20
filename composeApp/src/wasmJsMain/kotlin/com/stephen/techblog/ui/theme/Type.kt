@@ -48,19 +48,19 @@ val itemValueText = TextStyle(
 
 // 新增 h1 到 h6 的字体配置
 val h1Text = TextStyle(
-    fontSize = 22.sp,
+    fontSize = 32.sp,
     fontWeight = FontWeight.Bold,
     textAlign = TextAlign.Left
 )
 
 val h2Text = TextStyle(
-    fontSize = 20.sp,
+    fontSize = 24.sp,
     fontWeight = FontWeight.Bold,
     textAlign = TextAlign.Left
 )
 
 val h3Text = TextStyle(
-    fontSize = 18.sp,
+    fontSize = 20.sp,
     fontWeight = FontWeight.Bold,
     textAlign = TextAlign.Left
 )
