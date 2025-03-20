@@ -1,18 +1,18 @@
+# ComposeWebBlogs
 This is a Kotlin Multiplatform project targeting Web.
 
-* `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - `commonMain` is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    `iosMain` would be the right folder for such calls.
+因为github使用的开源博客主题在其他网站部署需要昂贵的会员费，所以自己动手写一个博客网页，使用Jetpack Compose来开发。
 
+## 开发计划
+* 中文乱码通过引入思源开源字体解决，设置中文专用字体即可
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html),
-[Compose Multiplatform](https://github.com/JetBrains/compose-multiplatform/#compose-multiplatform),
-[Kotlin/Wasm](https://kotl.in/wasm/)…
+```kotlin
+@Composable
+fun getChineseFont() = FontFamily(
+    Font(resource = Res.font.noto_sans_regular, weight = FontWeight.Normal),
+)
+```
 
-We would appreciate your feedback on Compose/Web and Kotlin/Wasm in the public Slack channel [#compose-web](https://slack-chats.kotlinlang.org/c/compose-web).
-If you face any issues, please report them on [GitHub](https://github.com/JetBrains/compose-multiplatform/issues).
-
-You can open the web application by running the `:composeApp:wasmJsBrowserDevelopmentRun` Gradle task.
+* 主题方面先采用`Hydejack`同款样式，根据其交互框架来进一步扩展
+* markdown显示逻辑还需探索，可能要和原生来搭配使用，之前的开源框架不确定是否可以直接用来展示md文件
+* 内存，CPU等性能问题，CMP在网页端的表现如何也需要观察
