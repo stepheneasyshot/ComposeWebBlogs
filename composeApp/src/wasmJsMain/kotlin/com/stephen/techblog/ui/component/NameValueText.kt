@@ -10,8 +10,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.stephen.debugmanager.ui.theme.itemKeyText
-import com.stephen.debugmanager.ui.theme.itemValueText
+import com.stephen.techblog.ui.theme.itemKeyText
+import com.stephen.techblog.ui.theme.itemValueText
 
 @Composable
 fun NameValueText(name: String, value: String, modifier: Modifier = Modifier) {

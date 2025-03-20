@@ -3,10 +3,14 @@ package com.stephen.techblog.ui.theme
 import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ColorFilter
 import com.mikepenz.markdown.model.MarkdownColors
 
 // 网络链接颜色
 val networkTextColor = Color(0xff62bffc)
+
+val juejinColorFilter = ColorFilter.tint(Color(0xff1881ff))
+val csdnColorFilter = ColorFilter.tint(Color(0xffcf000d))
 
 val markDownDark = object : MarkdownColors {
     override val text: Color

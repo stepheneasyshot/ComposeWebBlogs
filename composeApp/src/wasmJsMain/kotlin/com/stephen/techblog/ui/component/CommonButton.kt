@@ -15,7 +15,7 @@ import androidx.compose.ui.composed
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.input.pointer.pointerInput
-import com.stephen.debugmanager.ui.theme.defaultText
+import com.stephen.techblog.ui.theme.defaultText
 
 @Composable
 fun CommonButton(

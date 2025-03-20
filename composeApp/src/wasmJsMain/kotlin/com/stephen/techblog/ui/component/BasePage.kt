@@ -7,7 +7,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.stephen.debugmanager.ui.theme.pageTitleText
+import com.stephen.techblog.ui.theme.pageTitleText
 
 @Composable
 fun BasePage(title: String, content: @Composable () -> Unit) {

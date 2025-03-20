@@ -19,7 +19,7 @@ import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.input.key.*
 import androidx.compose.ui.unit.dp
-import com.stephen.debugmanager.ui.theme.infoText
+import com.stephen.techblog.ui.theme.infoText
 
 @Composable
 fun WrappedEditText(

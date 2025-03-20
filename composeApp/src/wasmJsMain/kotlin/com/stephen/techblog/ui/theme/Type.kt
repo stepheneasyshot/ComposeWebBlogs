@@ -1,31 +1,35 @@
-package com.stephen.debugmanager.ui.theme
+package com.stephen.techblog.ui.theme
 
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.sp
 import com.mikepenz.markdown.model.MarkdownTypography
+import org.jetbrains.compose.resources.Font
+import techblog.composeapp.generated.resources.Res
+import techblog.composeapp.generated.resources.noto_sans_regular
+
+@Composable
+fun getChineseFont() = FontFamily(
+    Font(resource = Res.font.noto_sans_regular, weight = FontWeight.Normal),
+)
 
 val defaultText = TextStyle(
-    fontSize = 16.sp,
+    fontSize = 18.sp,
     fontWeight = FontWeight.Normal,
     textAlign = TextAlign.Center,
 )
 
 val infoText = TextStyle(
-    fontSize = 14.sp,
+    fontSize = 18.sp,
     fontWeight = FontWeight.Normal,
     textAlign = TextAlign.Left,
 )
 
 val pageTitleText = TextStyle(
-    fontSize = 20.sp,
-    fontWeight = FontWeight.Bold,
-    textAlign = TextAlign.Center,
-)
-
-val groupTitleText = TextStyle(
-    fontSize = 18.sp,
+    fontSize = 24.sp,
     fontWeight = FontWeight.Bold,
     textAlign = TextAlign.Center,
 )

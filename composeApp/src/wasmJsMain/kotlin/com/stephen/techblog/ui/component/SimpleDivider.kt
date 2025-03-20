@@ -8,5 +8,5 @@ import androidx.compose.ui.Modifier
 
 @Composable
 fun SimpleDivider(modifier: Modifier = Modifier) {
-    Spacer(modifier.background(MaterialTheme.colorScheme.onBackground))
+    Spacer(modifier.background(MaterialTheme.colorScheme.onSecondary))
 }
