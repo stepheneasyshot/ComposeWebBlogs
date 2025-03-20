@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import com.stephen.techblog.data.ThemeState
 import com.stephen.techblog.ui.component.CenterText
@@ -21,7 +22,7 @@ import com.stephen.techblog.ui.component.SimpleDivider
 import com.stephen.techblog.ui.component.rememberToastState
 import com.stephen.techblog.ui.theme.csdnColorFilter
 import com.stephen.techblog.ui.theme.juejinColorFilter
-import com.stephen.techblog.ui.theme.pageTitleText
+import com.stephen.techblog.ui.theme.webTitleText
 import org.jetbrains.compose.resources.painterResource
 import techblog.composeapp.generated.resources.*
 
@@ -42,7 +43,7 @@ fun FirstWebPage(currentTheme: ThemeState, onThemeWitch: (ThemeState) -> Unit) {
                 contentDescription = "avatar"
             )
 
-            CenterText(text = "Stephen's Blogs", style = pageTitleText, modifier = Modifier.padding(bottom = 20.dp))
+            CenterText(text = "Stephen's Blogs", fontFamily = FontFamily.Monospace, style = webTitleText, modifier = Modifier.padding(bottom = 20.dp))
 
             SimpleDivider(modifier = Modifier.padding(bottom = 20.dp).height(2.dp).width(120.dp))
 
@@ -101,7 +102,7 @@ fun FirstWebPage(currentTheme: ThemeState, onThemeWitch: (ThemeState) -> Unit) {
             painter = painterResource(Res.drawable.ic_theme),
             contentDescription = "theme_switch",
             colorFilter = ColorFilter.tint(MaterialTheme.colorScheme.onPrimary),
-            modifier = Modifier.padding(20.dp).size(36.dp).align(Alignment.TopEnd).clickable(
+            modifier = Modifier.padding(20.dp).size(28.dp).align(Alignment.TopEnd).clickable(
                 interactionSource = remember { MutableInteractionSource() },
                 indication = null,
             ) {

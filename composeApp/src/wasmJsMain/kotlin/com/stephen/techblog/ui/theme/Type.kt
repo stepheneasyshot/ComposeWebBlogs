@@ -28,8 +28,8 @@ val infoText = TextStyle(
     textAlign = TextAlign.Left,
 )
 
-val pageTitleText = TextStyle(
-    fontSize = 24.sp,
+val webTitleText = TextStyle(
+    fontSize = 28.sp,
     fontWeight = FontWeight.Bold,
     textAlign = TextAlign.Center,
 )

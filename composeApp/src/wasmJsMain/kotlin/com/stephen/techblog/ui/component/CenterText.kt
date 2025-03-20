@@ -8,6 +8,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.FontFamily
 import com.stephen.techblog.ui.theme.defaultText
 import com.stephen.techblog.ui.theme.getChineseFont
 
@@ -16,6 +17,7 @@ fun CenterText(
     text: String,
     style: TextStyle = defaultText,
     modifier: Modifier = Modifier,
+    fontFamily: FontFamily = getChineseFont(),
     color: Color = MaterialTheme.colorScheme.onPrimary,
     alignment: Alignment = Alignment.Center
 ) {
@@ -27,7 +29,7 @@ fun CenterText(
             text = text,
             style = style,
             color = color,
-            fontFamily = getChineseFont()
+            fontFamily = fontFamily
         )
     }
 }

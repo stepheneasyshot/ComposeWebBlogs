@@ -16,3 +16,5 @@ fun getChineseFont() = FontFamily(
 * 主题方面先采用`Hydejack`同款样式，根据其交互框架来进一步扩展
 * markdown显示逻辑还需探索，可能要和原生来搭配使用，之前的开源框架不确定是否可以直接用来展示md文件
 * 内存，CPU等性能问题，CMP在网页端的表现如何也需要观察
+
+![](/screeenshots/Snipaste_2025-03-20_15-37-02.png)
